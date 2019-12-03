@@ -9,7 +9,7 @@
       "value": "myquickrun"
     },
     "taskContent": {
-        "value": "version: v1.0.0\nsteps:\n  - cmd: microsoft/azure-cli az login --identity\n  - cmd: microsoft/azure-cli az account list -o table"
+        "value": "version: v1.0.0\nsteps:\n  - cmd: microsoft/azure-cli az login --identity -u /subscriptions/3647315e-0c5b-4ce4-8739-b071e144b2c9/resourceGroups/TaskBVTRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/quickdockerrunidentity/208e2feb-2989-4ddf-b208-c30697229f20\n  - cmd: microsoft/azure-cli az account list -o table"
     }
   }
 }
