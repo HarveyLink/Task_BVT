@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ContainerRegistry/registries/taskRuns/",
+      "name": "afreadtest01/mytaskrunn1",
+      "location": "[parameters('location')]",
+      "apiVersion": "2019-06-01-preview",
+      "dependsOn": [
+        "afreadtest01"
+      ],
+      "properties": {
+          "runRequest": {
+            "type": "EncodedTaskRunRequest",
+            "encodedTaskContent": "c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K",
+            "encodedValuesContent": "Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==",
+            "platform": {
+                "os": "linux",
+                "architecture": "amd64"
+            },
+            "values": [
+                {
+                    "name": "mytestargument",
+                    "value": "mytestvalue1"
+                }
+            ]
+
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "taskRunName": {
+      "type": "string",
+      "value": "mytaskrunn32"
+    }
+  }
+}

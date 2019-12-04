@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.ContainerRegistry/registries/taskRuns/",
+      "name": "huanwudfeasttest2/mytaskrunn503",
+      "location": "[parameters('location')]",
+      "apiVersion": "2019-06-01-preview",
+      "properties": {
+          "runRequest": {
+            "type": "FileTaskRunRequest",
+            "sourceLocation": "https://github.com/Azure-Samples/acr-tasks.git",
+            "taskFilePath": "build-push-hello-world.yaml",
+            "platform": {
+                "os": "linux",
+                "architecture": "amd64"
+            },
+            "agentConfiguration": {
+                "cpu": 2
+            }
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "taskRunName": {
+      "type": "string",
+      "value": "mytaskrunn32"
+    }
+  }
+}
