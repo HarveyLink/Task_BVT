@@ -8,12 +8,28 @@
       "metadata": {
         "description": "Location for all resources."
       }
+    },
+    "registryName": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 50,
+      "metadata": {
+        "description": "Name of your Azure Container Registry"
+      }
+    },
+    "taskRunName": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 50,
+      "metadata": {
+        "description": "Name of your Task Run and tag generated"
+      }
     }
   },
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries/taskRuns/",
-      "name": "Encodedtaskrunregistry/filetaskrun",
+      "name": "[concat(parameters('registryName'), '/', parameters('taskRunName'))]",
       "location": "[parameters('location')]",
       "apiVersion": "2019-06-01-preview",
       "properties": {
@@ -35,7 +51,7 @@
   "outputs": {
     "taskRunName": {
       "type": "string",
-      "value": "filetaskrun"
+      "value": "[parameters('taskRunName')]"
     }
   }
 }
