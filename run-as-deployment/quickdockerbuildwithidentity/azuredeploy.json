@@ -87,10 +87,10 @@
           "runRequest": {
             "type": "DockerBuildRequest",
             "imageNames": [
-              "mytest2:123"
+              "[variables('imageName')]"
             ],
-            "sourceLocation": "https://github.com/huanwu/armtemplates.git",
-            "dockerFilePath": "Dockerfile-test",
+            "sourceLocation": "[parameters('sourceLocation')]",
+            "dockerFilePath": "Dockerfile",
             "values": [],
             "isPushEnabled": true,
             "platform": {
@@ -100,9 +100,9 @@
             "credentials": {
               "apiVersion": "2018-09-01",
               "customRegistries": {
-                  "huanwudftest2.azurecr-test.io": 
+                  "mydeploymentregistry.azurecr-test.io": 
                   {
-                      "identity": "98d4358f-fd01-4255-aac4-7256f7eb5483"
+                      "identity": "f98c28ec-8eb4-4734-8b0f-f91ed0e9a3bd"
                   }
                 },
                 "sourceRegistry": {
