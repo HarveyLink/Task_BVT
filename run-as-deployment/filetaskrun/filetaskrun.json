@@ -13,7 +13,7 @@
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries/taskRuns/",
-      "name": "huanwudfeasttest2/mytaskrunn503",
+      "name": "Encodedtaskrunregistry/mytaskrunn503",
       "location": "[parameters('location')]",
       "apiVersion": "2019-06-01-preview",
       "properties": {
