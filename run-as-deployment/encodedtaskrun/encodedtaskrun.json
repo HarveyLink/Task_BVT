@@ -13,11 +13,11 @@
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries/taskRuns/",
-      "name": "afreadtest01/mytaskrunn1",
+      "name": "mydeploymentregistry/mytaskrunn1",
       "location": "[parameters('location')]",
       "apiVersion": "2019-06-01-preview",
       "dependsOn": [
-        "afreadtest01"
+        "mydeploymentregistry"
       ],
       "properties": {
           "runRequest": {
