@@ -13,7 +13,7 @@
   "resources": [
     {
       "type": "Microsoft.ContainerRegistry/registries/taskRuns/",
-      "name": "Encodedtaskrunregistry/mytaskrunn1",
+      "name": "Encodedtaskrunregistry/encodedtaskrun",
       "location": "[parameters('location')]",
       "apiVersion": "2019-06-01-preview",
       "properties": {
@@ -39,7 +39,7 @@
   "outputs": {
     "taskRunName": {
       "type": "string",
-      "value": "mytaskrunn32"
+      "value": "encodedtaskrun"
     }
   }
 }
