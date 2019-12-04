@@ -16,9 +16,6 @@
       "name": "Encodedtaskrunregistry/mytaskrunn1",
       "location": "[parameters('location')]",
       "apiVersion": "2019-06-01-preview",
-      "dependsOn": [
-        "Encodedtaskrunregistry"
-      ],
       "properties": {
           "runRequest": {
             "type": "EncodedTaskRunRequest",
