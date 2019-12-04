@@ -6,7 +6,7 @@
         "value": "mydeploymentregistry"
       },
       "taskRunName": {
-        "value": "myquickdockerbuildrun"
+        "value": "quickdockerbuildrun"
       },
       "sourceLocation": {
         "value": "https://github.com/Azure-Samples/acr-build-helloworld-node.git"
