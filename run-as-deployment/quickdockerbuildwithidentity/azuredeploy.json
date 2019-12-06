@@ -87,7 +87,7 @@
           "runRequest": {
             "type": "DockerBuildRequest",
             "imageNames": [
-              "[variables('imageName')]"
+              "helloworld:identitytest"
             ],
             "sourceLocation": "[parameters('sourceLocation')]",
             "dockerFilePath": "Dockerfile",
@@ -100,9 +100,9 @@
             "credentials": {
               "apiVersion": "2018-09-01",
               "customRegistries": {
-                  "mydeploymentregistry.azurecr-test.io": 
+                  "taskrundeploymenteusdf.azurecr-test.io": 
                   {
-                      "identity": "f98c28ec-8eb4-4734-8b0f-f91ed0e9a3bd"
+                      "identity": "dc66dc3a-1191-4eb9-9117-5bd3715692a3"
                   }
                 },
                 "sourceRegistry": {
